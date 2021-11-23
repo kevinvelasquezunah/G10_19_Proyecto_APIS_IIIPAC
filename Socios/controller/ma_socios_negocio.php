@@ -13,8 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
   header('Content-Type: application/json');
 
 // Case según método elegido
-require_once("../config/conexion.php");
-require_once("../models/Ma_Socios_Negocio.php");
+require_once("../../config/conexion.php");
+require_once("../../Socios/models/Ma_Socios_Negocio.php");
 $ma_socios_negocio = new  Ma_socios_negocio();
 $body=json_decode(file_get_contents("php://input"),true);
 switch ($_GET["op"]){
